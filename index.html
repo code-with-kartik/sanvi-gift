@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mrs. Chulbuli! 🌸</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+        
+        body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; background: #fdfbfb; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+        .screen { display: none; min-height: 100vh; padding: 40px 20px; text-align: center; box-sizing: border-box; }
+        .active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        
+        /* Part 1: White Lotus Theme */
+        #part1 { background-color: #f4f1ea; color: #2c3e50; background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
+        .white-lotus-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #b78c44; margin-bottom: 5px; letter-spacing: 2px;}
+        .pin-input { font-size: 24px; padding: 15px; width: 180px; text-align: center; border: 2px solid #b78c44; border-radius: 8px; outline: none; background: transparent; margin-top: 20px; letter-spacing: 5px;}
+        .btn { margin-top: 25px; background-color: #b78c44; color: white; border: none; padding: 15px 40px; font-size: 18px; border-radius: 30px; cursor: pointer; transition: 0.3s; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px;}
+        .btn:hover { background-color: #8e6c32; transform: scale(1.05); }
+
+        /* Shinchan on Login Page */
+        .shinchan-login { width: 180px; margin-bottom: 20px; animation: bounce 2s infinite; border-radius: 10px; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+        /* Part 2: Gift Boxes */
+        #part2 { background-color: #ffe4e1; }
+        .gifts-title { font-family: 'Playfair Display', serif; color: #d6336c; font-size: 2.5rem; margin-bottom: 10px; }
+        .gifts-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; max-width: 800px; }
+        .gift-box { width: 120px; height: 120px; background: #ffb6c1; border-radius: 15px; display: flex; justify-content: center; align-items: center; font-size: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; position: relative; border: 3px dashed #fff; }
+        .gift-box:hover { transform: translateY(-10px) rotate(5deg); background: #ff69b4; }
+        .gift-box::after { content: 'Tap Me!'; position: absolute; bottom: -30px; font-size: 14px; color: #d6336c; font-weight: bold; }
+        .opened { pointer-events: none; opacity: 0.6; filter: grayscale(100%); }
+
+        /* Modals (Surprises) */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 100; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        .modal-content { background: white; padding: 40px; border-radius: 20px; max-width: 600px; width: 100%; text-align: center; position: relative; animation: popIn 0.5s ease-out; }
+        @keyframes popIn { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #333; }
+        
+        /* Shinchan in Gift Box */
+        .shinchan-gift { width: 150px; margin-bottom: 15px; border-radius: 10px; }
+
+        /* Gallery inside Modal */
+        .gallery-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+        .photo-frame { width: 120px; height: 150px; background: white; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 5px; transform: rotate(-3deg); transition: 0.3s; }
+        .photo-frame:nth-child(even) { transform: rotate(3deg); }
+        .photo-frame:hover { transform: scale(1.15) rotate(0deg); z-index: 10; }
+        
+        /* Object position top for better face visibility */
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
+        #pic1 { object-position: top; }
+
+        .horoscope-box { border: 2px solid #8a2be2; padding: 20px; border-radius: 10px; background: #f8f8ff; font-style: italic; font-size: 18px; color: #4b0082; }
+
+        /* Part 3: Final Letter */
+        #part3 { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+        .letter-container { background: white; max-width: 700px; padding: 50px; border-radius: 20px; box-shadow: 0 15px 40px rgba(214, 51, 108, 0.15); text-align: left; line-height: 1.9; font-size: 17px; }
+        .kdrama-title { font-family: 'Playfair Display', serif; color: #d6336c; text-align: center; font-size: 2.2rem; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <!-- Part 1: White Lotus VIP Login -->
+    <div id="part1" class="screen active">
+        <!-- Shinchan on Login Page -->
+        <img src="pic/shinchan_login.jpeg" alt="Shinchan" class="shinchan-login">
+        
+        <h1 class="white-lotus-title">The White Lotus</h1>
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; font-style: italic; color: #666;">Exclusive Guest Portal for Sanvi (Kritika)</p>
+        <p style="margin-top: 30px;">Enter your 4-digit VIP Passcode:</p>
+        <input type="password" id="passcode" class="pin-input" placeholder="****" maxlength="4">
+        <br>
+        <button class="btn" onclick="checkCode()">Check In</button>
+        <p id="error-msg" style="color: red; display: none; margin-top: 15px; font-weight: bold;">Access Denied. Try again!</p>
+    </div>
+
+    <!-- Part 2: The Gift Room -->
+    <div id="part2" class="screen">
+        <h1 class="gifts-title">Welcome, Mrs. Chulbuli! 🎉</h1>
+        <p style="font-size: 18px; color: #555;">K-Drama shuru hone se pehle, tumhare liye kuch surprises hain.<br>Har box ko ek-ek karke kholo!</p>
+        <div class="gifts-container">
+            <div class="gift-box" id="box1" onclick="openSurprise('surprise1', 'box1')">🎁</div>
+            <div class="gift-box" id="box2" onclick="openSurprise('surprise2', 'box2')">🎁</div>
+            <div class="gift-box" id="box3" onclick="openSurprise('surprise3', 'box3')">🎁</div>
+            <div class="gift-box" id="box4" onclick="openSurprise('surprise4', 'box4')">💌</div>
+        </div>
+        <p id="final-btn-container" style="display: none; margin-top: 40px;">
+            <button class="btn" style="background-color: #d6336c;" onclick="nextScreen('part2', 'part3')">Read The Final Letter 💖</button>
+        </p>
+    </div>
+
+    <!-- Modals for Surprises -->
+    <div id="surprise1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSurprise('surprise1')">&times;</span>
+            <h2 style="color: #ff4500;">Shinchan Ki Taraf Se! 🎈</h2>
+            
+            <!-- Shinchan in Gift Box -->
+            <img src="pic/shinchan_gift.jpeg" alt="Shinchan" class="shinchan-gift">
+
+            <p style="font-size: 20px; font-weight: bold;">"Duniya ki sabse badi Chulbuli ko Happy Birthday!"</p>
+            <p>Jaise Shinchan apni Misae ko pareshan karta hai, waise hi tum apni didi ko karti rehna! 😂</p>
+        </div>
+    </div>
+
+    <div id="surprise2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSurprise('surprise2')">&times;</span>
+            <h2>Today's Horoscope 🔮</h2>
+            <div class="horoscope-box">
+                "Bhavishyavani: Is saal aapko apne kamre ki shanti mein baith kar akele bahut saare K-Dramas dekhne ka mauka milega. Bahari duniya ke faltu drame se mukti milegi aur 'The White Lotus' jaisi luxury wali feeling aayegi."
+            </div>
+            <p style="margin-top: 15px;">Ek sachhe Introvert ka sabse bada sapna! ✨</p>
+        </div>
+    </div>
+
+    <div id="surprise3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSurprise('surprise3')">&times;</span>
+            <h2 style="color: #d6336c;">Main Character Moments 📸</h2>
+            <p>Every K-Drama needs its superstar!</p>
+            <div class="gallery-grid">
+                <!-- User's numbered photos -->
+                <div class="photo-frame"><img id="pic1" src="pic/1.jpeg" alt="Pic 1" onerror="this.src='https://via.placeholder.com/120x150?text=No+Pic'"></div>
+                <div class="photo-frame"><img src="pic/2.jpeg" alt="Pic 2" onerror="this.src='https://via.placeholder.com/120x150?text=No+Pic'"></div>
+                <div class="photo-frame"><img src="pic/3.jpeg" alt="Pic 3" onerror="this.src='https://via.placeholder.com/120x150?text=No+Pic'"></div>
+                <div class="photo-frame"><img src="pic/4.jpeg" alt="Pic 4" onerror="this.src='https://via.placeholder.com/120x150?text=No+Pic'"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="surprise4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSurprise('surprise4')">&times;</span>
+            <h2>One Last Thing... 💌</h2>
+            <p>Ek choti si dil ki baat bachi hai. Modal close karo aur 'Read The Final Letter' pe click karo!</p>
+        </div>
+    </div>
+
+    <!-- Part 3: The Long Letter -->
+    <div id="part3" class="screen">
+        <div class="letter-container">
+            <h1 class="kdrama-title">Annyeonghaseyo, Mrs. Chulbuli! 🌸</h1>
+            <p>Happiest Birthday chotii.. tum hamesha aise hi apni didi ko pareshan krti raho aur tumhari life khushiyon se bhari rahe. Bhagwan wo har wish poori kare jo tum cahti ho, aur aapke face ki smile kabhi kam na ho. 🫶🏻</p>
+            <p>Aaj ka din aapke liye utna hi special ho jitni aap khud ho. 🎀 May God always protect you from every negativity and bless you with lots of love.</p>
+            <p>Tumhara har aane wala saal pehle se zyada beautiful ho. Once again, happiest birthday! Enjoy your special day to the fullest isse jada kuch keh nhi skta kyuki jitta pata hn utta bata diye ho toh thoda adjust kr lena 😅✨</p>
+            <p style="text-align: right; font-weight: bold; margin-top: 40px; font-size: 1.2rem;">- Kartik</p>
+        </div>
+    </div>
+
+    <script>
+        let openedBoxes = 0;
+        
+        // Music Object
+        let bgMusic = new Audio('info/song.mp3');
+        bgMusic.loop = true;
+
+        function checkCode() {
+            let code = document.getElementById("passcode").value;
+            if(code === "3141") { 
+                
+                // Play music explicitly on click
+                bgMusic.play().catch(function(error) {
+                    console.log("Audio play failed.");
+                });
+                
+                nextScreen("part1", "part2");
+            } else {
+                document.getElementById("error-msg").style.display = "block";
+            }
+        }
+
+        function nextScreen(hideId, showId) {
+            document.getElementById(hideId).classList.remove("active");
+            document.getElementById(showId).classList.add("active");
+            window.scrollTo(0, 0);
+        }
+
+        function openSurprise(modalId, boxId) {
+            document.getElementById(modalId).style.display = "flex";
+            let box = document.getElementById(boxId);
+            if(!box.classList.contains("opened")) {
+                box.classList.add("opened");
+                box.innerHTML = "✅";
+                openedBoxes++;
+                if(openedBoxes === 4) {
+                    document.getElementById("final-btn-container").style.display = "block";
+                }
+            }
+        }
+
+        function closeSurprise(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</body>
+</html>
